@@ -1,0 +1,60 @@
+alias lg="ls -lah | grep -i"
+
+# temporary
+temp-gpaa-react(){
+	cd ~/Documents/ready/
+	npm start & 
+}
+
+# notes
+notes-linux() { $EDITOR ~/MEGA/Home/Reach\ For\ The\ SKY/Linux/notes ;} # linux related notes
+
+# reload configuration
+alias rld-zshrc="source ~/.zshrc"
+
+# update
+alias updt-system="sudo apt-get update"
+alias upgd-system="sudo apt-get upgrade"
+
+# install
+alias instl="sudo aptitude install"
+
+# MISC
+rsc-gpaasystem(){ rsync -av /var/www/html/free/ ~/MEGA/Work/Apps/GPAA\ System/free/ ;}
+rsc-reactnew(){ rsync -av ~/Documents/ready/app/ ~/MEGA/Work/Apps/GPAA\ System/react-new/ ;}
+
+# configuration 
+cfg-aliases() { $EDITOR ~/.aliases_winanda ;}
+cfg-zshrc() { $EDITOR ~/.zshrc ;}
+cfg-vimrc() { $EDITOR ~/.vimrc ;}
+
+# find alternative apps if it is installed on your system
+find_alt() { for i;do which "$i" >/dev/null && { echo "$i"; return 0;};done;return 1; }
+#
+# # set the default program
+# # the first program in the array will be chosen as the default
+export OPENER=$(find_alt xdg-open exo-open gnome-open )
+export BROWSER=$(find_alt chromium chromium-browser google-chrome firefox $OPENER )
+export BROWSERCLI=$(find_alt w3m links2 links lynx elinks $OPENER )
+export COMICER=$(find_alt mcomix comix zathura $OPENER )
+export EBOOKER=$(find_alt ebook-viewer $OPENER )
+export EDITOR=$(find_alt vim emacs nano leafpad gedit pluma $OPENER )
+export FILEMANAGER=$(find_alt pcmanfm thunar nautilus dolphin spacefm enlightenment_filemanager $OPENER )
+export MUSICER=$(find_alt mplayer mpg123 cvlc $OPENER )
+export PAGER=$(find_alt less more most)
+export PKMGR=$(find_alt yaourt pacman aptitude apt-get yum zypper emerge)
+export PLAYER=$(find_alt mplayer cvlc $OPENER )
+export READER=$(find_alt mupdf zathura evince $OPENER )
+export ROOTER=$(find_alt gksudo kdesudo )
+export IMAGEVIEWER=$(find_alt feh display eog $OPENER )
+
+export LESS_TERMCAP_mb=$'\E[01;31m'             # begin blinking
+export LESS_TERMCAP_md=$'\E[01;31m'             # begin bold
+export LESS_TERMCAP_me=$'\E[0m'                 # end mode
+export LESS_TERMCAP_se=$'\E[0m'                 # end standout-mode                 
+export LESS_TERMCAP_so=$'\E[01;44;33m'          # begin standout-mode - info box 
+export LESS_TERMCAP_ue=$'\E[0m'                 # end underline
+export LESS_TERMCAP_us=$'\E[01;32m'             # begin underline
+
+
+
