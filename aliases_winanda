@@ -11,10 +11,22 @@ notes-linux() { $EDITOR ~/MEGA/Home/Reach\ For\ The\ SKY/Linux/notes ;} # linux 
 
 # reload configuration
 alias rld-zshrc="source ~/.zshrc"
+# download 720p youtube video
+alias youdl-720p="youtube-dl -f 22"
 
 # update
 alias updt-system="sudo apt-get update"
 alias upgd-system="sudo apt-get upgrade"
+
+# jumping to a directory {{{
+	jmpto-gpaasystem-react(){
+		cd ~/Documents/ready/app
+	}
+
+	jmpto-gpaasystem-server(){
+		cd /var/www/html/free
+	}
+# }}}
 
 # install
 alias instl="sudo aptitude install"
@@ -22,6 +34,14 @@ alias instl="sudo aptitude install"
 # MISC
 rsc-gpaasystem(){ rsync -av /var/www/html/free/ ~/MEGA/Work/Apps/GPAA\ System/free/ ;}
 rsc-reactnew(){ rsync -av ~/Documents/ready/app/ ~/MEGA/Work/Apps/GPAA\ System/react-new/ ;}
+
+# transmission stuff
+tsm(){ transmission-remote -l ;}
+tsm-info(){ transmission-remote -t "$1" -i ;}
+
+# apt-get
+aget-search(){ apt-cache search "$1" ;}
+
 
 # configuration 
 cfg-aliases() { $EDITOR ~/.aliases_winanda ;}
