@@ -1,11 +1,42 @@
-alias lg="ls -lah | grep -i"
+# shortcut for jumping between directory {{{
+j(){
+	local jump=~/Documents
+	local param=$1
 
-# temporary
-temp-gpaa-react(){
-	cd ~/Documents/ready/
-	npm start & 
+	if [[ $param == "rea" ]]; then
+		jump=~/Documents/ready/app # gpaa react side
+	fi ;
+
+	if [[ $param == "ser" ]]; then
+		jump=/var/www/html/free    # gpaa server side
+	fi ;
+
+	if [[ $param == "dot" ]]; then
+		jump=~/dotfiles            # dotfiles directory
+	fi ;
+
+	cd $jump ;
 }
-
+# }}}
+# Initialize/start project {{{
+	sapp-gpaa-react(){
+		cd ~/Documents/ready
+		npm start
+	}
+# }}}
+# Tmux {{{
+	mux-kill-session(){ tmux kill-session -t $1 ;}	
+# }}}
+# transmission {{{
+	tsm(){ transmission-remote -l ;}
+	tsm-add(){ transmission-remote -a $1 ;}
+	tsm-info(){ transmission-remote -t "$1" -i ;}
+	tsm-config(){ sudo $EDITOR /etc/transmission-daemon/settings.json ;}
+	tsm-remove(){ transmission-remote -t "$1" -r ;}
+	tsm-start(){ transmission-remote -t "$1" -s ;}
+	tsm-stop(){ transmission-remote -t "$1" -S ;}
+# }}}
+alias lg="ls -lah | grep -i"
 # notes
 notes-linux() { $EDITOR ~/MEGA/Home/Reach\ For\ The\ SKY/Linux/notes ;} # linux related notes
 
@@ -18,29 +49,15 @@ alias youdl-720p="youtube-dl -f 22"
 alias updt-system="sudo apt-get update"
 alias upgd-system="sudo apt-get upgrade"
 
-# jumping to a directory {{{
-	jmpto-gpaasystem-react(){
-		cd ~/Documents/ready/app
-	}
-
-	jmpto-gpaasystem-server(){
-		cd /var/www/html/free
-	}
-# }}}
-
 # install
 alias instl="sudo aptitude install"
 
-# MISC
-rsc-gpaasystem(){ rsync -av /var/www/html/free/ ~/MEGA/Work/Apps/GPAA\ System/free/ ;}
-rsc-reactnew(){ rsync -av ~/Documents/ready/app/ ~/MEGA/Work/Apps/GPAA\ System/react-new/ ;}
-
-# transmission stuff
-tsm(){ transmission-remote -l ;}
-tsm-info(){ transmission-remote -t "$1" -i ;}
-
-# apt-get
-aget-search(){ apt-cache search "$1" ;}
+# Apt-get stuff {{{
+	aget-search(){ apt-cache search "$1" ;} # search program
+	aget-update(){ sudo apt-get update ;}   # update system
+	aget-upgrade(){ sudo apt-get upgrade ;} # upgrade system
+	aget-key(){ sudo apt-key update ;}      # update gpg key
+#}}}
 
 
 # configuration 
