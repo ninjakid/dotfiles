@@ -3,16 +3,20 @@ j(){
 	local jump=~/Documents
 	local param=$1
 
+	local GPAA_REACT_SIDE=~/Documents/ready/app
+	local GPAA_SERVER_SIDE=/var/www/html/free
+	local DOTFILES=~/dotfiles
+
 	if [[ $param == "rea" ]]; then
-		jump=~/Documents/ready/app # gpaa react side
+		jump=GPAA_REACT_SIDE       # gpaa react side
 	fi ;
 
 	if [[ $param == "ser" ]]; then
-		jump=/var/www/html/free    # gpaa server side
+		jump=GPAA_SERVER_SIDE      # gpaa server side
 	fi ;
 
 	if [[ $param == "dot" ]]; then
-		jump=~/dotfiles            # dotfiles directory
+		jump=DOTFILES              # dotfiles directory
 	fi ;
 
 	cd $jump ;
