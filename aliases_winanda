@@ -40,6 +40,10 @@ alias lg="ls -lah | grep -i"
 # notes
 notes-linux() { $EDITOR ~/MEGA/Home/Reach\ For\ The\ SKY/Linux/notes ;} # linux related notes
 
+# configure ranger {{{
+	cfg-ranger-rifle(){ $EDITOR ~/.config/ranger/rifle.conf ;}
+# }}}
+
 # reload configuration
 alias rld-zshrc="source ~/.zshrc"
 # download 720p youtube video
