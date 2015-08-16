@@ -10,12 +10,21 @@ call pathogen#helptags()	" include helppage for vim plugins in bundle folder
 
 filetype plugin indent on	" enable detection, plugin, indenting
 
+" switching between vim panes {{{
+	nnoremap <c-j> <c-w>j
+	nnoremap <c-k> <c-w>k
+	nnoremap <c-l> <c-w>l
+	nnoremap <c-h> <c-w>h
+
+" }}}
 
 " vimwiki
 
 set nocompatible
 filetype plugin on
 syntax on
+
+
 
 " moving around, searching and patterns
 
@@ -81,6 +90,7 @@ nmap ; :
 " reload .vimrc manually
 map <leader>reload :source ~/.vimrc<CR>
 
+
 scriptencoding utf-8
 set encoding=utf-8
 
@@ -111,6 +121,10 @@ imap jj <Esc>
 
 " change default leader
 let mapleader=","
+
+map <Leader>a :E<cr>
+let g:netrw_liststyle=3
+
 
 " save without closing file new key
 noremap <Leader>s :update<CR>
