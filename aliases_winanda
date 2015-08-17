@@ -1,22 +1,22 @@
+GPAA_SERVER_SIDE=/var/www/html/free
+GPAA_REACT_SIDE=~/Documents/ready/app
+DOTFILES=~/dotfiles
+
 # shortcut for jumping between directory {{{
 j(){
 	local jump=~/Documents
 	local param=$1
 
-	local GPAA_REACT_SIDE=~/Documents/ready/app
-	local GPAA_SERVER_SIDE=/var/www/html/free
-	local DOTFILES=~/dotfiles
-
 	if [[ $param == "rea" ]]; then
-		jump=GPAA_REACT_SIDE       # gpaa react side
+		jump=$GPAA_REACT_SIDE       # gpaa react side
 	fi ;
 
 	if [[ $param == "ser" ]]; then
-		jump=GPAA_SERVER_SIDE      # gpaa server side
+		jump=$GPAA_SERVER_SIDE      # gpaa server side
 	fi ;
 
 	if [[ $param == "dot" ]]; then
-		jump=DOTFILES              # dotfiles directory
+		jump=$DOTFILES              # dotfiles directory
 	fi ;
 
 	cd $jump ;
@@ -25,7 +25,7 @@ j(){
 # Initialize/start project {{{
 	sapp-gpaa-react(){
 		cd ~/Documents/ready
-		npm start
+		npm start &
 	}
 # }}}
 # Tmux {{{
@@ -39,6 +39,22 @@ j(){
 	tsm-remove(){ transmission-remote -t "$1" -r ;}
 	tsm-start(){ transmission-remote -t "$1" -s ;}
 	tsm-stop(){ transmission-remote -t "$1" -S ;}
+# }}}
+# Git {{{
+	# pushing all commit
+	gpush-all-commit(){ 
+		echo "pushing react side code"
+		cd $GPAA_REACT_SIDE
+		git push origin master
+
+		echo "pushing server side"
+		cd $GPAA_SERVER_SIDE
+		git push origin master
+
+		echo "pushing dotfiles"
+		cd $DOTFILES
+		git push origin master
+	}
 # }}}
 alias lg="ls -lah | grep -i"
 # notes
