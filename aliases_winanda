@@ -1,6 +1,8 @@
-GPAA_SERVER_SIDE=/var/www/html/free
-GPAA_REACT_SIDE=~/Documents/ready/app
-DOTFILES=~/dotfiles
+# Global variable {{{
+	GPAA_SERVER_SIDE=/var/www/html/free
+	GPAA_REACT_SIDE=~/Documents/ready/app
+	DOTFILES=~/dotfiles
+# }}}
 
 # shortcut for jumping between directory {{{
 j(){
