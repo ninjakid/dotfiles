@@ -32,6 +32,8 @@ j(){
 # }}}
 # Tmux {{{
 	alias mux="tmux -2"
+	# tmux configuration
+	cfg-tmux(){ $EDITOR ~/.tmux.conf ;}
 	mux-kill-session(){ tmux kill-session -t $1 ;}	
 # }}}
 # transmission {{{
