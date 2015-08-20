@@ -108,7 +108,8 @@ set title	" show title in console title bar
 
 " Themes {{{
 syntax enable
-set background=light	" set background light color
+" set background=dark	
+colorscheme distinguished
 " }}}
 
 " {{{ Word Wrapping
@@ -136,5 +137,3 @@ set tabstop=4
 set softtabstop=4
 set shiftwidth=4
 " }}}
-
-

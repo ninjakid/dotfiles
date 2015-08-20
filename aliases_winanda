@@ -27,10 +27,11 @@ j(){
 # Initialize/start project {{{
 	sapp-gpaa-react(){
 		cd ~/Documents/ready
-		npm start &
+		npm start &> /dev/null &
 	}
 # }}}
 # Tmux {{{
+	alias mux="tmux -2"
 	mux-kill-session(){ tmux kill-session -t $1 ;}	
 # }}}
 # transmission {{{

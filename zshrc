@@ -115,6 +115,7 @@ fi
 #zle -N zle-keymap-select
 
 
+export TERM='xterm-256color'
 
 
 
