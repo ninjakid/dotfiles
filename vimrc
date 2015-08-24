@@ -42,7 +42,7 @@ noremap H ^
 noremap L $
 
 " move between matching opening and ending code; example {code}
-map <tab> %
+" map <tab> %
 
 " make tabstop = softtabstop = shiftwidth {{{
 " usage: type command :Stab and enter value
@@ -136,4 +136,10 @@ noremap <Leader>d :wq<CR>
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
+" }}}
+" ultisnips configuration {{{
+
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 " }}}

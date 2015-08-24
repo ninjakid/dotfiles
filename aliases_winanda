@@ -61,6 +61,9 @@ j(){
 		git push origin master
 	}
 # }}}
+# System {{{
+sym-turnoff(){ sudo shutdown -h now ;}
+# }}}
 alias lg="ls -lah | grep -i"
 # notes
 notes-linux() { $EDITOR ~/MEGA/Home/Reach\ For\ The\ SKY/Linux/notes ;} # linux related notes
