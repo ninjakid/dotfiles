@@ -1,0 +1,11 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =9
+let g:netrw_dirhist_1='/home/adit/Documents/ready/app/utils'
+let g:netrw_dirhist_2='/home/adit/Documents/ready/app/actions'
+let g:netrw_dirhist_3='/home/adit/Documents/ready/app/components'
+let g:netrw_dirhist_4='/home/adit/Documents/ready/app/utils'
+let g:netrw_dirhist_5='/home/adit/Documents/ready/app'
+let g:netrw_dirhist_6='/home/adit/Documents/ready/app/actions'
+let g:netrw_dirhist_7='/home/adit/Documents/tempbackup/vimtheme/jellybeans.vim'
+let g:netrw_dirhist_8='/home/adit/Documents/tempbackup/examplegit'
+let g:netrw_dirhist_9='/home/adit/.vim/UltiSnips'
