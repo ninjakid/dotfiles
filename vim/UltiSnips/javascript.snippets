@@ -1,5 +1,40 @@
 snippet afn "anonymous function" 
-function(${1:div}){
+function(${1:e}){
 	$0
 }
+endsnippet
+
+snippet act "React flux action function" b
+${1:funcName}: function(${2:rawData}) {
+	AppDispatcher.dispatch({
+		type: ActionTypes.${0:TYPE},
+		$2: $2,
+	});
+},
+endsnippet
+
+snippet ret "return on function" b
+return ${0:result};
+endsnippet
+
+snippet getstate "getInitialState function on react" b
+getInitialState: function(){
+	return $0;
+},
+endsnippet
+
+snippet setstate "react this.setstate function" b
+this.setState($0);
+endsnippet
+
+snippet compdid "ComponentDidMount" b
+componentDidMount: function(){
+	${1:storeName}.addChangeListener(${0:callback});
+},
+endsnippet
+
+snippet compwill "ComponentWillUnmount" b
+componentWillUnmount: function(){
+	${1:storeName}.removeChangeListener(${0:callback});
+},
 endsnippet
