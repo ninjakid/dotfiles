@@ -3,7 +3,7 @@
 # variables
 dir=~/dotfiles
 olddir=~/dotfiles_old
-files="bashrc vimrc vim zshrc oh-my-zsh aliases_winanda"
+files="bashrc vimrc vim zshrc oh-my-zsh aliases_winanda tmux.conf"
 
 
 # create dotfiles_old in homedir
