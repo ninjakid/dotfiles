@@ -1,6 +1,6 @@
 # Global variable {{{
 	GPAA_SERVER_SIDE=/var/www/html/free
-	GPAA_REACT_SIDE=~/Documents/ready/app
+	GPAA_REACT_SIDE=~/Works/gpaa/project
 	DOTFILES=~/dotfiles
 # }}}
 
@@ -26,7 +26,7 @@ j(){
 # }}}
 # Initialize/start project {{{
 	sapp-gpaa-react(){
-		cd ~/Documents/ready
+		cd ~/Works/gpaa/project
 		npm start &> /dev/null &
 	}
 # }}}
