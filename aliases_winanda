@@ -85,12 +85,12 @@ alias upgd-system="sudo apt-get upgrade"
 alias instl="sudo aptitude install"
 
 # Apt-get stuff {{{
-	aget-search(){ apt-cache search "$1" ;} # search program
-	aget-update(){ sudo apt-get update ;}   # update system
-	aget-upgrade(){ sudo apt-get upgrade ;} # upgrade system
-	aget-key(){ sudo apt-key update ;}      # update gpg key
-	aget-install(){ sudo apt-get install $1 ;}  
-	aget-remove(){ sudo apt-get remove $1 ;}  
+alias aget-search="apt-cache search"
+alias aget-update="sudo apt-get update"
+alias aget-upgrade="sudo apt-get upgrade"
+alias aget-key="sudo apt-get key"
+alias aget-install="sudo apt-get install"
+alias aget-remove="sudo apt-get remove"
 #}}}
 
 
