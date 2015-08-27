@@ -66,7 +66,7 @@ sym-turnoff(){ sudo shutdown -h now ;}
 # }}}
 alias lg="ls -lah | grep -i"
 # notes
-notes-linux() { $EDITOR ~/MEGA/Home/Reach\ For\ The\ SKY/Linux/notes ;} # linux related notes
+notes-linux() { $EDITOR ~/MEGA/Notes\ and\ Ebooks/Linux/notes ;} # linux related notes
 
 # configure ranger {{{
 	cfg-ranger-rifle(){ $EDITOR ~/.config/ranger/rifle.conf ;}
