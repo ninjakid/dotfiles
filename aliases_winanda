@@ -2,6 +2,7 @@
 	GPAA_SERVER_SIDE=/var/www/html/free
 	GPAA_REACT_SIDE=~/Works/gpaa/project
 	DOTFILES=~/dotfiles
+	DOWNLOAD=~/Downloads
 # }}}
 
 # shortcut for jumping between directory {{{
@@ -19,6 +20,10 @@ j(){
 
 	if [[ $param == "dot" ]]; then
 		jump=$DOTFILES              # dotfiles directory
+	fi ;
+
+	if [[ $param == "d" ]]; then
+		jump=$DOWNLOAD              
 	fi ;
 
 	cd $jump ;

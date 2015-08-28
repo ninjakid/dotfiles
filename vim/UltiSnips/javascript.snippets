@@ -38,3 +38,9 @@ componentWillUnmount: function(){
 	${1:storeName}.removeChangeListener(${0:callback});
 },
 endsnippet
+
+snippet t "react html tag" b
+<${1:div}>
+	$0
+</${1/(\w+).*/$1/}>
+endsnippet
