@@ -44,3 +44,18 @@ snippet t "react html tag" b
 	$0
 </${1/(\w+).*/$1/}>
 endsnippet
+
+snippet template "react template" b
+var React = require('react');
+
+var $1 = React.createClass({
+	render: function() {
+		return (
+			$0
+		);
+	},
+});
+
+module.exports = $1 ;
+
+endsnippet
