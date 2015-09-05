@@ -97,7 +97,10 @@ alias aget-key="sudo apt-get key"
 alias aget-install="sudo apt-get install"
 alias aget-remove="sudo apt-get remove"
 #}}}
-
+# MongoDB {{{
+alias mongod="/home/adit/software_tarball/mongodb/bin/mongod --dbpath /home/adit/software_tarball/mongodata"
+alias mongo="/home/adit/software_tarball/mongodb/bin/mongo"
+# }}}
 
 # configuration 
 cfg-aliases() { $EDITOR ~/.aliases_winanda ;}
