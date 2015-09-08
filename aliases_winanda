@@ -6,28 +6,28 @@
 # }}}
 
 # shortcut for jumping between directory {{{
-j(){
-	local jump=~/Documents
-	local param=$1
-
-	if [[ $param == "rea" ]]; then
-		jump=$GPAA_REACT_SIDE       # gpaa react side
-	fi ;
-
-	if [[ $param == "ser" ]]; then
-		jump=$GPAA_SERVER_SIDE      # gpaa server side
-	fi ;
-
-	if [[ $param == "dot" ]]; then
-		jump=$DOTFILES              # dotfiles directory
-	fi ;
-
-	if [[ $param == "d" ]]; then
-		jump=$DOWNLOAD              
-	fi ;
-
-	cd $jump ;
-}
+# j(){
+# 	local jump=~/Documents
+# 	local param=$1
+# 
+# 	if [[ $param == "rea" ]]; then
+# 		jump=$GPAA_REACT_SIDE       # gpaa react side
+# 	fi ;
+# 
+# 	if [[ $param == "ser" ]]; then
+# 		jump=$GPAA_SERVER_SIDE      # gpaa server side
+# 	fi ;
+# 
+# 	if [[ $param == "dot" ]]; then
+# 		jump=$DOTFILES              # dotfiles directory
+# 	fi ;
+# 
+# 	if [[ $param == "d" ]]; then
+# 		jump=$DOWNLOAD              
+# 	fi ;
+# 
+# 	cd $jump ;
+# }
 # }}}
 # Initialize/start project {{{
 	sapp-gpaa-react(){

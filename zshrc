@@ -114,9 +114,12 @@ fi
 #zle -N zle-line-init
 #zle -N zle-keymap-select
 
+# fasd initial config {{{
+source /home/adit/software_tarball/fasd/fasd
+eval "$(fasd --init auto)"
+# }}}
 
 export TERM='xterm-256color'
-
 
 
 
